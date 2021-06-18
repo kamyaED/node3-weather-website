@@ -11,7 +11,7 @@ const forecast = (longitude, lattitude, callback) =>{
             callback('Incorrect Location!', undefined);
         } 
         else {            
-            forecastData = "Temprature: " + body.current.temperature + " degrees" + "\nLocal Time: " + body.current.observation_time;
+            forecastData = "Temprature: " + body.current.temperature + " degrees" + "\nObservation Time: " + body.current.observation_time;
             callback(undefined, forecastData);
         }   
         })

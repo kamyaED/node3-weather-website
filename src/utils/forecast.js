@@ -10,9 +10,9 @@ const forecast = (longitude, lattitude, callback) =>{
         else if( body.error){
             callback('Incorrect Location!', undefined);
         } 
-        else {
-            const temperature = body.current.temperature;
-            callback(undefined, temperature);
+        else {            
+            forecastData = "Temprature: " + body.current.temperature + " degrees" + "\nLocal Time: " + body.current.observation_time;
+            callback(undefined, forecastData);
         }   
         })
 }
